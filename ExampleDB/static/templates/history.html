@@ -1,0 +1,16 @@
+<div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th width="80%">Query</th>
+        <th width="20%">Utilizar</th>
+      </tr>
+    </thead>
+    <tr ng-repeat="query in queryService.history track by $index">
+      <td width="80%" class="mono-font">{{ query }}</td>
+      <td width="20%">
+        <button class="btn btn-primary" ng-click="useQuery($index);"><i class="fa fa-external-link"></i></button>
+      </td>
+    </tr>
+  </table>
+</div>
